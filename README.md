@@ -1,24 +1,38 @@
-# README
+# <モチ勉>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
 
-Things you may want to cover:
+<夢や目標に向かっている人が勉強やトレーニングを習慣にするサイト>
 
-* Ruby version
+### サイトテーマ
 
-* System dependencies
+<モチベーションを保ち習慣化する>
 
-* Configuration
+### テーマを選んだ理由
 
-* Database creation
+<私はメモ帳に自分の考えや行動、習慣にしたいこと、目標などを記録していましたが項目が増えると見づらくなり、使いづらいと思いました。なので、メモ帳、目標設定、モチベーションの維持がまとめてできるサイトがあれば便利だと思いこのテーマにしました。>
 
-* Database initialization
+### ターゲットユーザ
 
-* How to run the test suite
+<目標に向かってモチベーションを保ちたい方や良い習慣を身につけたい人。>
 
-* Services (job queues, cache servers, search engines, etc.)
+### 主な利用シーン
 
-* Deployment instructions
+<勉強を継続させたい時、いい習慣を身につけたい時など。
+また目標設定、勉強時間の管理をしたい時に活用できます。>
 
-* ...
+## 設計書
+
+<...>
+
+## チャレンジ要素一覧
+
+<https://docs.google.com/spreadsheets/d/1Jr55pbyxMY5l31eN1YFFtJ3zHfpiMaabT0yUWmWEGQA/edit?usp=sharing>
+
+## 開発環境
+
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JS ライブラリ：jQuery
+- IDE：Cloud9
