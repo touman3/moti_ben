@@ -1,0 +1,2 @@
+module GoalTimesHelper
+end

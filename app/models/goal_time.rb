@@ -1,0 +1,2 @@
+class GoalTime < ApplicationRecord
+end
