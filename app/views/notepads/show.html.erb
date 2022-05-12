@@ -1,2 +1,6 @@
-<h1>Notepads#show</h1>
-<p>Find me in app/views/notepads/show.html.erb</p>
+<h2>タイトル</h2>
+<p><%= @notepad.title %></p>
+
+<h2>本文</h2>
+<p><%= @notepad.content %></p>
+<%= link_to "編集", edit_notepad_path(@notepad.id) %>

@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_06_032224) do
+ActiveRecord::Schema.define(version: 2022_05_11_133452) do
+
+  create_table "genres", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "namen", null: false
+    t.string "namea", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "goal_times", force: :cascade do |t|
     t.integer "goal_id", null: false
@@ -35,6 +43,12 @@ ActiveRecord::Schema.define(version: 2022_05_06_032224) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "members", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "notepads", force: :cascade do |t|
     t.string "title", null: false
     t.text "content", null: false
@@ -53,6 +67,15 @@ ActiveRecord::Schema.define(version: 2022_05_06_032224) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "words", force: :cascade do |t|
+    t.integer "genre_id", null: false
+    t.integer "member_id", null: false
+    t.string "content", null: false
+    t.string "name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

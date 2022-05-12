@@ -1,2 +1,8 @@
-<h1>Notepads#index</h1>
-<p>Find me in app/views/notepads/index.html.erb</p>
+<h1>メモ一覧</h1>
+
+<% @notepads.each do |notepad| %>
+ <p>タイトル</p>
+ <span>
+  <%= link_to notepad.title, notepad_path(notepad.id) %>
+ </span>
+<% end %>
