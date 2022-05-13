@@ -1,5 +1,5 @@
 <h1>編集画面</h1>
-<%= form_with model: @notepad, url: update_notepad_path(@notepad.id), method: :patch do |f| %>
+<%= form_with model: @notepad, url: notepad_path(@notepad.id), method: :patch do |f| %>
  <h4>タイトル</h4>
  <%= f.text_field :title %>
 

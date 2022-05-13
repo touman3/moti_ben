@@ -1,2 +1,19 @@
-<h1>Goals#show</h1>
-<p>Find me in app/views/goals/show.html.erb</p>
+<h4>目標</h4>
+<p><%= @goal.name %></p>
+
+<h4>理由</h4>
+<h5>未来</h5>
+<p><%= @goal.future %></p>
+<h5>現在</h5>
+<p><%= @goal.now %></p>
+<h5>過去</h5>
+<p><%= @goal.past %></p>
+
+<h4>期間</h4>
+<p><%= @goal.start_date %></p>
+<p><%= @goal.finish_date %></p>
+<h4>期間内勉強時間</h4>
+<p><%= @goal.study_time %></p>
+<%= link_to "編集", edit_goal_path(@goal.id) %>
+<%= link_to "削除", goal_path(@goal.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+

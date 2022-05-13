@@ -1,2 +1,30 @@
-<h1>Goals#new</h1>
-<p>Find me in app/views/goals/new.html.erb</p>
+<h1>目標投稿</h1>
+<% if @goal.errors.any? %>
+  <%= @goal.errors.count %>件のエラーが発生しました
+  <ul>
+    <% @goal.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_with model: @goal, url: '/goals', method: :post do |f| %>
+  <h4>目標</h4>
+  <%= f.text_field :name %>
+
+  <h4>理由</h4>
+  <h5>未来</h5>
+  <%= f.text_area :future %>
+  <h5>現在</h5>
+  <%= f.text_area :now %>
+  <h5>過去</h5>
+  <%= f.text_area :past %>
+
+  <h4>期間</h4>
+  <%= f.date_field :start_date %>
+  <%= f.date_field :finish_date %>
+　<h4>期間内勉強時間</h4>
+　<%= f.number_field :study_time %>
+
+  <%= f.submit '投稿' %>
+<% end %>

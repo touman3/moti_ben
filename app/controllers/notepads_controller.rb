@@ -4,9 +4,12 @@ class NotepadsController < ApplicationController
   end
 
   def create
-    notepad = Notepad.new(notepad_params)
-    notepad.save
-    redirect_to action: :index
+    @notepad = Notepad.new(notepad_params)
+    if @notepad.save
+      redirect_to action: :index
+    else
+      render :new
+    end
   end
 
   def index
@@ -25,6 +28,12 @@ class NotepadsController < ApplicationController
     notepad = Notepad.find(params[:id])
     notepad.update(notepad_params)
     redirect_to notepad_path(notepad.id)
+  end
+
+  def destroy
+    notepad = Notepad.find(params[:id])
+    notepad.destroy
+    redirect_to action: :index
   end
 
   private

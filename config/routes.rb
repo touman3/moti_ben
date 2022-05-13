@@ -1,13 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "homes#top"
-  get 'notepads/new'
-  get 'top' => 'home#top'
-  post 'notepads' => 'notepads#create'
-  get 'notepads' => 'notepads#index'
-  get 'notepads/:id' => 'notepads#show', as: 'notepad'
-  get 'notepads/:id/edit' => 'notepads#edit', as: 'edit_notepad'
-  patch 'notepads/:id' => 'notepads#update', as: 'update_notepad'
+  resources :notepads
   resources :goals
   resources :goal_times
   resources :members
