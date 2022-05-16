@@ -6,7 +6,7 @@ class GoalsController < ApplicationController
   def create
     @goal = Goal.new(goal_params)
     if @goal.save
-      redirect_to goal_path(goal.id)
+      redirect_to action: :index
     else
       render :new
     end

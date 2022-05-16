@@ -10,15 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_11_133452) do
-
-  create_table "genres", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "namen", null: false
-    t.string "namea", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
+ActiveRecord::Schema.define(version: 2022_05_16_150444) do
 
   create_table "goal_times", force: :cascade do |t|
     t.integer "goal_id", null: false
@@ -39,12 +31,6 @@ ActiveRecord::Schema.define(version: 2022_05_11_133452) do
     t.datetime "start_date", null: false
     t.datetime "finish_date", null: false
     t.integer "study_time", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "members", force: :cascade do |t|
-    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -70,10 +56,10 @@ ActiveRecord::Schema.define(version: 2022_05_11_133452) do
   end
 
   create_table "words", force: :cascade do |t|
-    t.integer "genre_id", null: false
-    t.integer "member_id", null: false
+    t.integer "user_id", null: false
     t.string "content", null: false
     t.string "name", null: false
+    t.integer "genre", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

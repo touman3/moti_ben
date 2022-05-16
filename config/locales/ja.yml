@@ -1,0 +1,7 @@
+ja:
+  enums:
+    word:
+      genre:
+        relationship: "対人関係"
+        learn: "仕事・学び"
+        life: "人生・性格"

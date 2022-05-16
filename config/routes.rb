@@ -4,8 +4,7 @@ Rails.application.routes.draw do
   resources :notepads
   resources :goals
   resources :goal_times
-  resources :members
-  resources :genres
+  resources :words
 
   get '/about' => 'homes#about'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

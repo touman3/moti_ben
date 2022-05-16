@@ -1,2 +1,16 @@
-<h1>GoalTimes#new</h1>
-<p>Find me in app/views/goal_times/new.html.erb</p>
+<h1>新規投稿</h1>
+<%= form_with model: GoalTime.new do |f| %>
+  <h4>タイトル</h4>
+  <%= f.collection_select(:goal_id, @goals, :id, :name) %>
+
+　<%= f.hidden_field :member_id, value: "値" %>
+  <h4>本文</h4>
+  <%= f.datetime_field :start_time %>
+  <%= f.datetime_field :finish_time %>
+
+  <%= f.hidden_field :total, value: "値" %>
+  <%= f.hidden_field :day, value: "値" %>
+
+  <%= f.submit '投稿' %>
+
+<% end %>
