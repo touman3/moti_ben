@@ -1,0 +1,9 @@
+<h1>一覧画面</h1>
+<% @words.each do |word| %>
+<div>
+  <p>ジャンル : <%= word.genre %></p>
+  <p>ユーザーネーム：<%= link_to word.user.name, word_path(word.id) %></p>
+  <p>名言：<%= word.content %></p>
+  <p>作成者：<%= word.name %></p>
+</div>
+<% end %>

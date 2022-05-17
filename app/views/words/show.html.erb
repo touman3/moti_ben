@@ -1,0 +1,10 @@
+<div>
+  <p>ジャンル : <%= @word.genre %></p>
+  <p>ユーザーネーム：<%= @word.user.name %></p>
+  <p>名言：<%= @word.content %></p>
+  <p>作成者：<%= @word.name %></p>
+  <p>投稿日：<%= @word.created_at.strftime('%Y/%m/%d') %></p>
+  <% if @word.user == current_user %>
+    <%= link_to "削除", word_path(@word), method: :delete %>
+  <% end %>
+</div>

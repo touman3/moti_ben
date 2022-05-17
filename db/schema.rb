@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_16_150444) do
+ActiveRecord::Schema.define(version: 2022_05_17_015720) do
 
   create_table "goal_times", force: :cascade do |t|
     t.integer "goal_id", null: false
-    t.integer "member_id", null: false
+    t.integer "user_id", null: false
     t.datetime "start_time", null: false
     t.datetime "finish_time", null: false
     t.integer "total", null: false
